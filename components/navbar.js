@@ -28,18 +28,18 @@ export default function Navbar() {
           </span>
         </a>
         <div className="navbar-dropdown is-right">
-          <Link href="/cart"><a className="navbar-item">Cart</a></Link>
-          <Link href="/my-orders"><a className="navbar-item">My Orders</a></Link>
-          <Link href="/payments"><a className="navbar-item">Payment Methods</a></Link>
-          <Link href="/profile"><a className="navbar-item">Profile</a></Link>
+          <Link href="/cart" className="navbar-item">Cart</Link>
+          <Link href="/my-orders" className="navbar-item">My Orders</Link>
+          <Link href="/payments" className="navbar-item">Payment Methods</Link>
+          <Link href="/profile" className="navbar-item">Profile</Link>
           {
             profile.store ?
               <>
                 <Link href={`/stores/${profile.store.id}`}><a className="navbar-item">View Your Store</a></Link>
-                <Link href="/products/new"><a className="navbar-item">Add a new Product</a></Link>
+                <Link href="/products/new" className="navbar-item">Add a new Product</Link>
               </>
               :
-              <Link href="/stores/new"><a className="navbar-item">Interested in selling?</a></Link>
+              <Link href="/stores/new" className="navbar-item">Interested in selling?</Link>
           }
           <hr className="navbar-divider"></hr>
           <a className="navbar-item" onClick={
@@ -59,15 +59,11 @@ export default function Navbar() {
     return (
       <div className="navbar-item">
         <div className="buttons">
-          <Link href="/register">
-            <a className="button is-primary">
+          <Link href="/register" className="button is-primary">
               <strong>Sign up</strong>
-            </a>
           </Link>
-          <Link href="/login">
-            <a className="button is-light">
+          <Link href="/login" className="button is-light">
               Log in
-            </a>
           </Link>
         </div>
       </div>
@@ -93,8 +89,8 @@ export default function Navbar() {
 
       <div className="navbar-menu" ref={navbar}>
         <div className="navbar-start">
-          <Link href="/products"><a className="navbar-item">Products</a></Link>
-          <Link href="/stores"><a className="navbar-item">Stores</a></Link>
+          <Link href="/products" className="navbar-item">Products</Link>
+          <Link href="/stores" className="navbar-item">Stores</Link>
         </div>
         <div className="navbar-end">
           {

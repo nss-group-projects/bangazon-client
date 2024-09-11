@@ -4,15 +4,11 @@ export default function Detail({ store, isOwner, favorite, unfavorite }) {
   const ownerButtons = () => {
     return (
       <div className="buttons">
-        <Link href={`/stores/${store.id}/edit`}>
-          <a className="button is-primary is-inverted">
+        <Link href={`/stores/${store.id}/edit`} className="button is-primary is-inverted">
             Edit Store
-          </a>
         </Link>
-        <Link href="/products/new">
-          <a className="button is-primary is-inverted">
+        <Link href="/products/new" className="button is-primary is-inverted">
             Add a Product
-          </a>
         </Link>
       </div>
     )

@@ -11,7 +11,7 @@ export function ProductCard({ product, removeProduct, isOwner = false, width="is
         </div>
         <header className="card-header">
           <p className="card-header-title">
-            <Link href={`/products/${product.id}`}><a>{product.name} - ${product.price}</a></Link>
+            <Link href={`/products/${product.id}`}>{product.name} - ${product.price}</Link>
           </p>
         </header>
         <div className="card-content">
@@ -22,7 +22,7 @@ export function ProductCard({ product, removeProduct, isOwner = false, width="is
         {
           isOwner ?
             <footer className="card-footer">
-              <Link href={`/products/${product.id}/edit`}><a className="card-footer-item">Edit</a></Link>
+              <Link href={`/products/${product.id}/edit`} className="card-footer-item">Edit</Link>
               <a onClick={() => removeProduct(product.id)} className="card-footer-item">Delete</a>
             </footer>
             :

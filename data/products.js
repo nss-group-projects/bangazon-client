@@ -1,7 +1,7 @@
 import { fetchWithResponse, fetchWithoutResponse } from './fetcher'
 
 export function getProducts(query=undefined) {
-  const url = 'products'
+  let url = 'products'
 
   if (query) {
     url += `?${query}`

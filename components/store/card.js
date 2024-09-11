@@ -18,9 +18,7 @@ export function StoreCard({ store, width= "is-half" }) {
           </div>
         </div>
         <footer className="card-footer">
-          <Link href={`stores/${store.id}`}>
-            <a className="card-footer-item">View Store</a>
-          </Link>
+          <Link href={`stores/${store.id}`} className="card-footer-item">View Store</Link>
         </footer>
       </div>
     </div>
